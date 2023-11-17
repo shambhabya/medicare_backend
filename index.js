@@ -2,10 +2,11 @@
 const express = require('express');
 const faker = require('faker');
 const specialities = require('./specialities');
+require("dotenv").config();
 const BASE_URL = process.env.BASE_URL
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.use(express.static("public"));
 
