@@ -5,14 +5,14 @@ const specialities = require('./specialities');
 require("dotenv").config();
 const cors = require("cors");
 
+const app = express();
+const port = process.env.PORT || 3000;
+
 app.use(
   cors({
     origin: "https://wondrous-malasada-99113d.netlify.app/",
   })
 )
-
-const app = express();
-const port = process.env.PORT || 3000;
 
 app.use(express.static("public"));
 
