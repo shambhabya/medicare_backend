@@ -3,7 +3,13 @@ const express = require('express');
 const faker = require('faker');
 const specialities = require('./specialities');
 require("dotenv").config();
-const BASE_URL = process.env.BASE_URL
+const cors = require("cors");
+
+app.use(
+  cors({
+    origin: "https://wondrous-malasada-99113d.netlify.app/",
+  })
+)
 
 const app = express();
 const port = process.env.PORT || 3000;
