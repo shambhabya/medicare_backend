@@ -8,13 +8,9 @@ const cors = require("cors");
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.use(
-  cors({
-    origin: "https://wondrous-malasada-99113d.netlify.app/",
-  })
-)
-
 app.use(express.static("public"));
+
+app.use(cors());
 
 const generateFakeData = (speciality) => {
     return {
